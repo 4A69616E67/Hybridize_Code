@@ -10,7 +10,7 @@ gtfFile=~/data/ref_data/annotation/XenTr_10.0_XenLa_10.1_GCF.gff3
 XtrGtfFile="~/data/ref_data/annotation/XENTR_10.0_NCBI.clean.gtf"
 XlaGtfFile="~/data/ref_data/annotation/XENLA_10.1_GCF.gtf"
 
-mkdir $DataDir $MappingDir $ResultDir $StatDir
+mkdir ../$DataDir ../$MappingDir ../$ResultDir ../$StatDir
 
 
 ##========================data quality control and trim========================
