@@ -1,3 +1,4 @@
+# variables need to be defined firstly, otherwise would run failed.
 ########primer options
 Samples=(s9ctcf-1 s9ctcf-2 s9Inp s9k27ac-1 s9k27ac-2 s9k27me3-1 s9k27me3-2 s9k4me1-1 s9k4me1-2 s9k4me3-1 s9k4me3-2 s9p53-1 s9p53-2 s9pol-1 s9pol-2 s9rad21-1 s9rad21-2 telsctcf-1 telsctcf-2 telsInp telsk27ac-1 telsk27ac-2 telsk27me3-1 telsk27me3-2 telsk4me1-1 telsk4me1-2 telsk4me3-1 telsk4me3-2 telsp53-1 telsp53-2 telspol-1 telspol-2 telsrad21-1 telsrad21-2)
 SArrays={s9ctcf-1,s9ctcf-2,s9Inp,s9k27ac-1,s9k27ac-2,s9k27me3-1,s9k27me3-2,s9k4me1-1,s9k4me1-2,s9k4me3-1,s9k4me3-2,s9p53-1,s9p53-2,s9pol-1,s9pol-2,s9rad21-1,s9rad21-2,telsctcf-1,telsctcf-2,telsInp,telsk27ac-1,telsk27ac-2,telsk27me3-1,telsk27me3-2,telsk4me1-1,telsk4me1-2,telsk4me3-1,telsk4me3-2,telsp53-1,telsp53-2,telspol-1,telspol-2,telsrad21-1,telsrad21-2}
