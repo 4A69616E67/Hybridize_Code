@@ -1,0 +1,20 @@
+################require
+Input = f:/Project/SZY/hybridize/RNA/result/Hybridize.featureCount.Xtr.matrix
+# Control = TeLs-s8,TeLs-s9,TeLs-s10,TeLs-s11,XLXT-S8,XLXT-S9,XLXT-S10,XLXT-S11,TeTs-s8,TeTs-s9,TeTs-s10,TeTs-s11,TeTs-s8,TeTs-s9,TeTs-s10,TeTs-s11,XLWT-S8,XLWT-S9,XLWT-S10,XLWT-S11,XLXT-S8,XLXT-S9,XLXT-S10,XLXT-S11,XLWT-S8,XLWT-S9,XLWT-S10,XLWT-S11,TeTs-s8,TeTs-s9,TeTs-s10,TeTs-s11,P53sP53e-S8,P53sP53e-S9,P53sP53e-S10,P53sP53e-S11,TsP53e-S8,TsP53e-S9,TsP53e-S10,TsP53e-S11,XTWT-hpf7
+Control = LsP53e-s9
+################option
+OutDir = f:/Project/SZY/hybridize/RNA/result/DES
+Prefix = Hybri_Xtr.TPM
+# Treat = LsP53e-S11,P53sLe-S8,P53sLe-S9,P53sLe-S10,P53sLe-S11,P53sP53e-S8,P53sP53e-S9,P53sP53e-S10,P53sP53e-S11,TeLs-s8,TeLs-s9,TeLs-s10,TeLs-s11,TeLs-s8,TeLs-s9,TeLs-s10,TeLs-s11,TeLs-s8,TeLs-s9,TeLs-s10,TeLs-s11,LsP53e-S8,LsP53e-S9,LsP53e-S10,LsP53e-S11,LsP53e-S8,LsP53e-S9,LsP53e-S10,LsP53e-S11,LsP53e-S8,LsP53e-S9,LsP53e-S10,LsP53e-S11,LsP53e-S8,LsP53e-S9,LsP53e-S10,LsP53e-S11,TeLs-hpf7
+Treat = TeLs-s9
+Condition = f:/Project/SZY/hybridize/RNA/scripts/sample.info.txt
+Species = xtr
+GO = T
+KEGG = T
+################# 
+# TPM = T
+GeneLens = f:/Project/Xenopus/XENTR_10.0_geneLen.txt
+MaxP = 0.05
+MinLog2FC = 1
+# Include = f:/Project/SZY/hybridize/RNA/scripts/TF_gene.list.txt
+Exclude = 

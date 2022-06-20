@@ -54,3 +54,4 @@ perl featureCount2matrix.pl Hybridize.featureCount.Xla > Hybridize.featureCount.
 
 #######################
 ####merge gene count in Xtr and Xla using R script
+####Different gene expression processed using R script

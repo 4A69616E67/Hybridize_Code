@@ -1,0 +1,5 @@
+SampleID,Tissue,Replicate,bamReads,ControlID,bamControl,Peaks,PeakCaller,Condition
+TeLs-Rep1,23C,1,TeLs-Rep1.sort.rmdup.filter.Xtr.bam,,,../data/TeLs-Rep.split.Xtr.merged.consensus.peaks.bed,bed,TeLs
+TeLs-Rep2,23C,2,TeLs-Rep2.sort.rmdup.filter.Xtr.bam,,,../data/TeLs-Rep.split.Xtr.merged.consensus.peaks.bed,bed,TeLs
+WTXT-Rep1,23C,1,WTXT-Rep1.sort.rmdup.filter.Xtr.bam,,,../data/WTXT-Rep.split.Xtr.merged.consensus.peaks.bed,bed,WTXT
+WTXT-Rep2,23C,2,WTXT-Rep2.sort.rmdup.filter.Xtr.bam,,,../data/WTXT-Rep.split.Xtr.merged.consensus.peaks.bed,bed,WTXT

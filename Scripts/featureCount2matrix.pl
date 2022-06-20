@@ -1,3 +1,14 @@
+##input file created by featureCount
+##convert the featureCount output file to matrix format
+##matrix format like
+##  gene_name   sample1 sample2 sample3 ...
+##    gene1       1        2      1     ...
+##    gene2       9        7      8     ...
+##     ...        ...     ...    ...    ...
+
+
+
+
 #!/usr/bin/perl
 @infiles=@ARGV;
 my %gene_matrix,@allsamples;

@@ -110,17 +110,9 @@ pheatmap(cor(CountData, method = "pearson"), display_numbers = F, show_colnames 
 dds <- DESeqDataSetFromMatrix(CountData, colData = Condition, design = ~group) # 由于data的列必须与group的行相同，所以得去掉group中没有的样本
 dds <- DESeq(dds)
 write.table(assay(normTransform(dds)), file = paste(OutDir, "/", OutPrefix, ".nor.tsv", sep = ""), quote = F, sep = "\t") # 打印标准化后的序列
-##### t-SNE
-tsne.info <- Rtsne::Rtsne(t(assay(normTransform(dds))), perplexity = 2)
-tsne.data <- data.frame(sample = names(CountData), Type = Condition$group, tSNE_1 = tsne.info$Y[, 1], tSNE_2 = tsne.info$Y[, 2])
-tsne_plot <- ggpubr::ggscatter(tsne.data, x = "tSNE_1", y = "tSNE_2", color = "Type", label = "Type", repel = T, title = "perplexity = 2")
-print(tsne_plot)
 # PCA分析
 pcaData <- plotPCA(vst(dds, blind = F), intgroup = "group") + theme_bw()
 ggpubr::ggscatter(pcaData$data, x = "PC1", y = "PC2", color = "group", label = "group", repel = T)
-# fig <- plot_ly(data = pcaData$data, x= ~PC1, y= ~PC2, color = ~condition, type = "scatter", mode = "markers", size = 2) %>%
-#   plotly::layout(title = "PCA", xaxis = list(zeroline = FALSE), yaxis = list(zeroline = FALSE))
-# htmlwidgets::saveWidget(as_widget(fig), file = paste(OutDir, "/html/", OutPrefix, ".pca.html", sep = ""), selfcontained = T, libdir = html_lib_dir)
 
 write.table(pcaData$data, file = paste(OutDir, "/", OutPrefix, ".pca.tsv", sep = ""), quote = F, sep = "\t", row.names = F) # 打印PCA的结果
 # 识别或加载对照组和处理组的名字
@@ -166,7 +158,6 @@ res_xlsx_list <- list()
 Changed_gene_list <- list()
 go_term_list <- list()
 kegg_term_list <- list()
-cat("Diff expression genes analysis start")
 volcano_fig_list <- list()
 GO_fig_list <- list()
 Up_GO_fig_list <- list()
@@ -174,6 +165,7 @@ Down_GO_fig_list <- list()
 KEGG_fig_list <- list()
 Up_KEGG_fig_list <- list()
 Down_KEGG_fig_list <- list()
+cat("Diff expression genes analysis start")
 #-------------------------进行差异分析----------------------------------------
 for (i in 1:length(TreatList)) {
   aSample <- as.character(TreatList[i])
